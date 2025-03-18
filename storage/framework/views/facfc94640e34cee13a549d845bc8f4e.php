@@ -1,0 +1,1 @@
+<script src="<?php echo e(asset('assets/lib/bootstrap/js/bootstrap.js')); ?>"></script><?php /**PATH /Users/yennajy/Desktop/multi auth/multi_auth_laravel/resources/views/script.blade.php ENDPATH**/ ?>
