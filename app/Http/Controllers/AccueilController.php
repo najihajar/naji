@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Mail;
 class AccueilController extends Controller
 {
     // Page d'accueil
-    public function accueil()
+    public function index()
     {
         
-        return view('accueil.accueil'); 
+        return view('accueil.index'); 
     }
 
     // Page de présentation
