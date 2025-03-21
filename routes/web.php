@@ -6,7 +6,7 @@ use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\AnnonceController;
 
 use App\Http\Controllers\LoginController;
-// use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\AbsenceRequestController;
@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware('auth')->group(function (){
-    // Route::get('admin/dashboard', [AccueilController::class, 'index']);
+    Route::get('admin/dashboard', [AccueilController::class, 'index']);
     Route::get('/admin/annonces', [AnnonceController::class, 'index'])->name('admin/annonces');
     Route::get('/admin/annonces/create', [AnnonceController::class, 'create'])->name('admin/annonces/create');
     Route::post('/admin/annonces/store', [AnnonceController::class, 'store'])->name('admin/annonces/store');

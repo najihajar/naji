@@ -1,8 +1,8 @@
-@extends('base')
-@section('title', 'Contact')
 
-@section('content')
-<link rel="stylesheet" href="{{ asset('CSS/style.css') }}">
+<?php $__env->startSection('title', 'Contact'); ?>
+
+<?php $__env->startSection('content'); ?>
+<link rel="stylesheet" href="<?php echo e(asset('CSS/style.css')); ?>">
 <!-- Conteneur principal -->
 <div class="full-page-container">
     <!-- Texte avec fond semi-transparent -->
@@ -48,4 +48,6 @@
     </div>
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('base', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\HP\Desktop\monStg\myproj\resources\views/accueil/contact.blade.php ENDPATH**/ ?>

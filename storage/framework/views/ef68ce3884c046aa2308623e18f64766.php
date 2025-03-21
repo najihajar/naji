@@ -1,8 +1,8 @@
-@extends('base')
-@section('title', 'Presentation')
 
-@section('content')
-<link rel="stylesheet" href="{{ asset('CSS/style.css') }}">
+<?php $__env->startSection('title', 'Presentation'); ?>
+
+<?php $__env->startSection('content'); ?>
+<link rel="stylesheet" href="<?php echo e(asset('CSS/style.css')); ?>">
 <!-- Ajoutez Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,7 +15,7 @@
 
 <!-- Image principale avec texte intégré -->
 <div class="image-banner">
-    <img src="{{ asset('images/img.jpg') }}" alt="À propos de la résidence" class="img-fluid expanded-image">
+    <img src="<?php echo e(asset('images/img.jpg')); ?>" alt="À propos de la résidence" class="img-fluid expanded-image">
     <div class="banner-text">
         
         <p>
@@ -37,24 +37,24 @@
     <h3>Galerie de la Résidence</h3>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
-            @for ($i = 1; $i <= 4; $i++)
+            <?php for($i = 1; $i <= 4; $i++): ?>
                 <div class="col">
                     <div class="card gallery-card animate-card">
-                        <img src="{{ asset('images/img.jpg') }}" class="card-img-top" alt="Photo {{ $i }}">
+                        <img src="<?php echo e(asset('images/img.jpg')); ?>" class="card-img-top" alt="Photo <?php echo e($i); ?>">
                         <div class="card-body">
-                            <h5 class="card-title">Titre {{ $i }}</h5>
-                            <p class="card-text">Description {{ $i }}</p>
+                            <h5 class="card-title">Titre <?php echo e($i); ?></h5>
+                            <p class="card-text">Description <?php echo e($i); ?></p>
                         </div>
                     </div>
                 </div>
-            @endfor
+            <?php endfor; ?>
         </div>
     </div>
 </div>
 
 <!-- Ajoutez le script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-@endsection
+<?php $__env->stopSection(); ?>
 
 <style>
 body {
@@ -148,3 +148,4 @@ body {
 }
 
 </style>
+<?php echo $__env->make('base', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\HP\Desktop\monStg\myproj\resources\views/accueil/presentation.blade.php ENDPATH**/ ?>

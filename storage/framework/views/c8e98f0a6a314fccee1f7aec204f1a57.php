@@ -1,8 +1,8 @@
-@extends('base')
-@section('title', 'Clubs')
 
-@section('content')
-<link rel="stylesheet" href="{{ asset('CSS/style.css') }}">
+<?php $__env->startSection('title', 'Clubs'); ?>
+
+<?php $__env->startSection('content'); ?>
+<link rel="stylesheet" href="<?php echo e(asset('CSS/style.css')); ?>">
 
 
 
@@ -19,7 +19,7 @@
     <!-- Club 1 -->
     <div class="club">
     <div class="club-header">
-        <img src="{{ asset('images/sport.png') }}" alt="Club de Sport Logo" class="club-logo">
+        <img src="<?php echo e(asset('images/sport.png')); ?>" alt="Club de Sport Logo" class="club-logo">
         <h2>Club de Sport</h2>
     </div>
     <h5 class="club-description">
@@ -41,18 +41,18 @@
         </ul>
 </h5>
     <div class="club-gallery">
-        <img src="{{ asset('images/sport1.png') }}" alt="Club de Sport Image 1">
-        <img src="{{ asset('images/sport2.jpg') }}" alt="Club de Sport Image 2">
-        <img src="{{ asset('images/sport3.jpg') }}" alt="Club de Sport Image 3">
-        <img src="{{ asset('images/sport4.jpg') }}" alt="Club de Sport Image 4">
-        <img src="{{ asset('images/sport5.jpg') }}" alt="Club de Sport Image 5">
-        <img src="{{ asset('images/sport6.jpg') }}" alt="Club de Sport Image 6">
+        <img src="<?php echo e(asset('images/sport1.png')); ?>" alt="Club de Sport Image 1">
+        <img src="<?php echo e(asset('images/sport2.jpg')); ?>" alt="Club de Sport Image 2">
+        <img src="<?php echo e(asset('images/sport3.jpg')); ?>" alt="Club de Sport Image 3">
+        <img src="<?php echo e(asset('images/sport4.jpg')); ?>" alt="Club de Sport Image 4">
+        <img src="<?php echo e(asset('images/sport5.jpg')); ?>" alt="Club de Sport Image 5">
+        <img src="<?php echo e(asset('images/sport6.jpg')); ?>" alt="Club de Sport Image 6">
     </div>
 </div>
     <!-- Club 2 -->
     <div class="club">
     <div class="club-header">
-        <img src="{{ asset('images/cooking.png') }}" alt="Club de Cuisine et d'Économie Domestique Logo" class="club-logo">
+        <img src="<?php echo e(asset('images/cooking.png')); ?>" alt="Club de Cuisine et d'Économie Domestique Logo" class="club-logo">
         <h2>Club de Cuisine et d'Économie Domestique</h2>
     </div>
     <h5 class="club-description">
@@ -72,19 +72,19 @@
         </ul>
     </h5>
     <div class="club-gallery">
-        <img src="{{ asset('images/cooking1.png') }}" alt="Club de Cuisine Image 1">
-        <img src="{{ asset('images/cooking2.png') }}" alt="Club de Cuisine Image 2">
-        <img src="{{ asset('images/cooking3.png') }}" alt="Club de Cuisine Image 3">
-        <img src="{{ asset('images/cooking4.png') }}" alt="Club de Cuisine Image 4">
-        <img src="{{ asset('images/cooking5.png') }}" alt="Club de Cuisine Image 5">
-        <img src="{{ asset('images/cooking6.png') }}" alt="Club de Cuisine Image 6">
+        <img src="<?php echo e(asset('images/cooking1.png')); ?>" alt="Club de Cuisine Image 1">
+        <img src="<?php echo e(asset('images/cooking2.png')); ?>" alt="Club de Cuisine Image 2">
+        <img src="<?php echo e(asset('images/cooking3.png')); ?>" alt="Club de Cuisine Image 3">
+        <img src="<?php echo e(asset('images/cooking4.png')); ?>" alt="Club de Cuisine Image 4">
+        <img src="<?php echo e(asset('images/cooking5.png')); ?>" alt="Club de Cuisine Image 5">
+        <img src="<?php echo e(asset('images/cooking6.png')); ?>" alt="Club de Cuisine Image 6">
     </div>
 </div>
 
     <!-- Club 3 -->
     <div class="club">
         <div class="club-header">
-            <img src="{{ asset('images/culturel.png') }}" alt="Club 2 Logo" class="club-logo">
+            <img src="<?php echo e(asset('images/culturel.png')); ?>" alt="Club 2 Logo" class="club-logo">
             <h2>Club Culturel Scientifique</h2>
         </div>
         <h5 class="club-description">
@@ -112,18 +112,18 @@
         </ul>
     </h5>
         <div class="club-gallery">
-            <img src="{{ asset('images/1.png') }}" alt="Club 2 Image 1">
-            <img src="{{ asset('images/2.png') }}" alt="Club 2 Image 2">
-            <img src="{{ asset('images/3.png') }}" alt="Club 2 Image 3">
-            <img src="{{ asset('images/4.png') }}" alt="Club 2 Image 4">
-            <img src="{{ asset('images/5.png') }}" alt="Club 2 Image 5">
-            <img src="{{ asset('images/6.png') }}" alt="Club 2 Image 6">
+            <img src="<?php echo e(asset('images/1.png')); ?>" alt="Club 2 Image 1">
+            <img src="<?php echo e(asset('images/2.png')); ?>" alt="Club 2 Image 2">
+            <img src="<?php echo e(asset('images/3.png')); ?>" alt="Club 2 Image 3">
+            <img src="<?php echo e(asset('images/4.png')); ?>" alt="Club 2 Image 4">
+            <img src="<?php echo e(asset('images/5.png')); ?>" alt="Club 2 Image 5">
+            <img src="<?php echo e(asset('images/6.png')); ?>" alt="Club 2 Image 6">
         </div>
     </div>
     <!-- Club 4-->
     <div class="club">
     <div class="club-header">
-        <img src="{{ asset('images/social.png') }}" alt="Club de Service Communautaire Logo" class="club-logo">
+        <img src="<?php echo e(asset('images/social.png')); ?>" alt="Club de Service Communautaire Logo" class="club-logo">
         <h2>Club de Service Communautaire</h2>
     </div>
     <h5 class="club-description">
@@ -147,12 +147,13 @@
         </ul>
     </h5>
     <div class="club-gallery">
-        <img src="{{ asset('images/community1.png') }}" alt="Club de Service Communautaire Image 1">
-        <img src="{{ asset('images/community2.png') }}" alt="Club de Service Communautaire Image 2">
-        <img src="{{ asset('images/community3.png') }}" alt="Club de Service Communautaire Image 3">
-        <img src="{{ asset('images/community4.png') }}" alt="Club de Service Communautaire Image 4">
-        <img src="{{ asset('images/community5.png') }}" alt="Club de Service Communautaire Image 5">
-        <img src="{{ asset('images/community6.png') }}" alt="Club de Service Communautaire Image 6">
+        <img src="<?php echo e(asset('images/community1.png')); ?>" alt="Club de Service Communautaire Image 1">
+        <img src="<?php echo e(asset('images/community2.png')); ?>" alt="Club de Service Communautaire Image 2">
+        <img src="<?php echo e(asset('images/community3.png')); ?>" alt="Club de Service Communautaire Image 3">
+        <img src="<?php echo e(asset('images/community4.png')); ?>" alt="Club de Service Communautaire Image 4">
+        <img src="<?php echo e(asset('images/community5.png')); ?>" alt="Club de Service Communautaire Image 5">
+        <img src="<?php echo e(asset('images/community6.png')); ?>" alt="Club de Service Communautaire Image 6">
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('base', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\HP\Desktop\monStg\myproj\resources\views/accueil/club.blade.php ENDPATH**/ ?>

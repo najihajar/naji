@@ -10,6 +10,6 @@ class Annonce extends Model
     use HasFactory;
 
     protected $table = 'annonces';
-    protected $fillable = ['titre', 'contenu'];
+    protected $fillable = ['titre', 'contenu', 'image']; // Ajoutez 'image' ici
     protected $dates = ['created_at', 'updated_at'];
 }

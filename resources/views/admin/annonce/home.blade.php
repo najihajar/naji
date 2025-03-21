@@ -4,10 +4,7 @@
             {{ __('Admin Annonce') }}
         </h2>
     </x-slot>
-    
-    <!-- Lien vers le fichier CSS -->
     <link rel="stylesheet" href="{{ asset('CSS/style.css') }}">
-    
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-lg rounded-lg">
@@ -30,6 +27,7 @@
                                 <tr>
                                     <th class="px-6 py-4 text-left font-semibold">Titre</th>
                                     <th class="px-6 py-4 text-left font-semibold">Contenu</th>
+                                    <th class="px-6 py-4 text-left font-semibold">Image</th>
                                     <th class="px-6 py-4 text-center font-semibold">Actions</th>
                                 </tr>
                             </thead>
@@ -38,6 +36,13 @@
                                     <tr class="border-b hover:bg-gray-100 transition">
                                         <td class="px-6 py-4 text-gray-900 font-medium text-lg">{{ $annonce->titre }}</td>
                                         <td class="px-6 py-4 text-gray-700 text-lg">{{ $annonce->contenu }}</td>
+                                        <td class="px-6 py-4">
+                                            @if($annonce->image)
+                                                <img src="{{ asset('storage/' . $annonce->image) }}" alt="Annonce Image" class="w-20 h-20 object-cover">
+                                            @else
+                                                <span>No Image</span>
+                                            @endif
+                                        </td>
                                         <td class="px-6 py-4 flex justify-center space-x-3">
                                             <a href="{{ route('admin/annonces/show', $annonce->id) }}" 
                                                class="bg-blue-200 text-black px-4 py-2 rounded-lg shadow hover:bg-blue-300 transition">

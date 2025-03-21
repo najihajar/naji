@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Annonce;
 use App\Models\ContactMessage;
 use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
@@ -12,10 +12,11 @@ class AccueilController extends Controller
     // Page d'accueil
     public function index()
     {
-        
-        return view('accueil.index'); 
+        $annonces = Annonce::all();
+        return view('accueil.index', compact('annonces')); 
     }
 
+    
     // Page de présentation
     public function presentation()
     {

@@ -1,8 +1,8 @@
-@extends('base')
-@section('title', 'Accueil')
 
-@section('content')
-<link rel="stylesheet" href="{{ asset('CSS/style.css') }}">
+<?php $__env->startSection('title', 'Accueil'); ?>
+
+<?php $__env->startSection('content'); ?>
+<link rel="stylesheet" href="<?php echo e(asset('CSS/style.css')); ?>">
 
 <div class="container-custom">
     <div class="text-section">
@@ -18,13 +18,13 @@
         </h4></br></br></br></br></br></br>
         <div class="scroll-down">
             <a href="javascript:void(0);" onclick="showAnnonces()">
-                <img src="{{ asset('images/fléche.png') }}" alt="Flèche vers le bas" class="animated-arrow">
+                <img src="<?php echo e(asset('images/fléche.png')); ?>" alt="Flèche vers le bas" class="animated-arrow">
             </a>
         </div>
         <h1 id="annonces-title" style="color: red; text-align: center; margin-top: 20px;">📢 Annonces Importantes (Click)</h1> <!-- Titre pour les annonces -->
     </div>
     <div class="image-section">
-        <img src="{{ asset('images/photo.jpg') }}" alt="Illustration" class="animated-image">
+        <img src="<?php echo e(asset('images/photo.jpg')); ?>" alt="Illustration" class="animated-image">
     </div>
 </div>
 
@@ -32,21 +32,21 @@
 <div class="annonces" id="annonces" style="display: none;">
     <div class="container">
         <div class="annonces-grid">
-            @foreach($annonces as $annonce)
+            <?php $__currentLoopData = $annonces; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $annonce): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="annonce-card">
-                    <h4>{{ $annonce->titre }}</h4>
-                    <p>{{ $annonce->contenu }}</p>
-                    @if($annonce->image)
-                        <img src="{{ asset('storage/' . $annonce->image) }}" alt="Annonce Image" class="annonce-image">
-                    @else
+                    <h4><?php echo e($annonce->titre); ?></h4>
+                    <p><?php echo e($annonce->contenu); ?></p>
+                    <?php if($annonce->image): ?>
+                        <img src="<?php echo e(asset('storage/' . $annonce->image)); ?>" alt="Annonce Image" class="annonce-image">
+                    <?php else: ?>
                         <span>No Image</span>
-                    @endif
+                    <?php endif; ?>
                 </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
 <style>
     .fade-in-text {
@@ -68,7 +68,7 @@
     .scroll-down img {
         width: 100px;
         cursor: pointer;
-        animation: bounce 1.5s infinite; 
+        animation: bounce 1.5s infinite; /* Animation bounce ajoutée à la flèche */
     }
 
     @keyframes bounce {
@@ -104,8 +104,8 @@
 
     .annonce-image {
         width: 100%;
-        height: 200px; 
-        object-fit: cover; 
+        height: 200px; /* Taille fixe pour les images */
+        object-fit: cover; /* Assure que l'image couvre toute la zone sans être déformée */
         border-radius: 8px;
     }
 </style>
@@ -114,7 +114,9 @@
     function showAnnonces() {
         const annoncesSection = document.getElementById('annonces');
         const annoncesTitle = document.getElementById('annonces-title');
-        annoncesSection.style.display = 'block'; 
+        annoncesSection.style.display = 'block'; // Afficher la section des annonces
         
     }
 </script>
+
+<?php echo $__env->make('base', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\HP\Desktop\monStg\myproj\resources\views/accueil/index.blade.php ENDPATH**/ ?>
