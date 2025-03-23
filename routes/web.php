@@ -26,7 +26,7 @@ Route::middleware('auth')->group(function () {
 
 
 
-Route::middleware('auth')->group(function (){
+Route::middleware('auth:admin')->group(function (){
     Route::get('admin/dashboard', [AccueilController::class, 'index']);
     Route::get('/admin/annonces', [AnnonceController::class, 'index'])->name('admin/annonces');
     Route::get('/admin/annonces/create', [AnnonceController::class, 'create'])->name('admin/annonces/create');
@@ -43,9 +43,10 @@ Route::get('/residente', [AccueilController::class, 'residente'])->name('app_res
 Route::get('/club', [AccueilController::class, 'club'])->name('app_club');
 Route::get('/inscription', [AccueilController::class, 'inscription'])->name('app_inscription');
 
+
 // Contact (corrigé)
-Route::get('/contact', [ContactController::class, 'index'])->name('app_contact');
-Route::post('/contact', [ContactController::class, 'sendMessage'])->name('contact.send');
+Route::get('/contact', [AccueilController::class, 'contact'])->name('app_contact');
+Route::post('/contact', [ContactController::class, 'store']);
 
 
 

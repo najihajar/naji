@@ -156,4 +156,136 @@
     </div>
 </div>
 <?php $__env->stopSection(); ?>
+
+<style>
+.full-page-container {
+    background-image: url('<?php echo e(asset('images/pre2.jpg')); ?>'); /* Remplace 'pre2.jpg' par ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px; /* Ajuste la hauteur selon ton besoin */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: bold; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    .clubs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.club {
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9; 
+}
+
+.club:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.club-header {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.club-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.club-header h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #0000CD;
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+.club-description {
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    text-align: justify; 
+    font-style: normal; 
+    font-family: 'Times New Roman', serif; 
+}
+
+
+
+.club-description ul {
+    padding-left: 20px;
+}
+
+
+.club-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.club-gallery img {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.club-gallery img:hover {
+    transform: scale(1.5); 
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.overlay-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+
+</style>
 <?php echo $__env->make('base', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\HP\Desktop\monStg\myproj\resources\views/accueil/club.blade.php ENDPATH**/ ?>

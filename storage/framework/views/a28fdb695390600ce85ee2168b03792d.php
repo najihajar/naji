@@ -1,1 +1,0 @@
-<script src="<?php echo e(asset('assets/lib/bootstrap/js/bootstrap.js')); ?>"></script><?php /**PATH C:\Users\HP\Desktop\nv\Hajar\resources\views/script.blade.php ENDPATH**/ ?>

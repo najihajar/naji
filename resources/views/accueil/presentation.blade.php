@@ -57,6 +57,29 @@
 @endsection
 
 <style>
+.full-page-container {
+    background-image: url('{{ asset('images/pre2.jpg') }}'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: bold; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;

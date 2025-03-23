@@ -9,29 +9,45 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
      <?php $__env->slot('header', null, []); ?> 
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <?php echo e(__('Admin Dashboard')); ?>
-
-
-            hello Admin hajar
-        </h2>
-     <?php $__env->endSlot(); ?>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <!-- <?php echo e(__("You're logged in!")); ?> -->
-                    <div class="d-flex align-items-center justify-content-between">
-                                 
-                                   
-                </div>
-                <hr/>
+        <div class="flex items-center justify-between bg-gradient-to-r from-blue-600 to-purple-600 p-4 shadow-lg">
+            <div class="flex items-center">
                 
-                    
-                </div>
+                <h2 class="font-bold text-2xl text-black tracking-wide ">
+                    <?php echo e(__('Admin Dashboard')); ?>
+
+                </h2>
+                
             </div>
         </div>
+     <?php $__env->endSlot(); ?>
+
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-900 text-white p-6 shadow-xl fixed h-full">
+            <nav>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="<?php echo e(route('admin/annonces')); ?>" class="flex items-center justify-center w-full text-center bg-blue-500 hover:bg-blue-700 text-black font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                            
+                            Annonces
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900">
+                        <!-- Content will be loaded here dynamically -->
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

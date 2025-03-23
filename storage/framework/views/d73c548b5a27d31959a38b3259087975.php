@@ -21,7 +21,7 @@
                 <div class="p-6 text-gray-900">
                     <?php echo e(__("You're logged in!")); ?>
 
-                    user hajar naji
+                   
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@
                 <img src="{{ asset('images/fléche.png') }}" alt="Flèche vers le bas" class="animated-arrow">
             </a>
         </div>
-        <h1 id="annonces-title" style="color: red; text-align: center; margin-top: 20px;">📢 Annonces Importantes (Click)</h1> <!-- Titre pour les annonces -->
+        <h1 id="annonces-title" style="color: red; text-align: center; margin-top: 20px;">📢 Annonces Importantes (Cliquez ici)</h1> <!-- Titre pour les annonces -->
     </div>
     <div class="image-section">
         <img src="{{ asset('images/photo.jpg') }}" alt="Illustration" class="animated-image">

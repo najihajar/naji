@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Annonce;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage; // Ajoutez cette ligne
+use Illuminate\Support\Facades\Storage; 
 class AnnonceController extends Controller
 {
     /**
@@ -33,7 +33,7 @@ class AnnonceController extends Controller
         $request->validate([
             'titre' => 'required',
             'contenu' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validation de l'image
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', 
         ]);
 
         // Gestion de l'upload de l'image

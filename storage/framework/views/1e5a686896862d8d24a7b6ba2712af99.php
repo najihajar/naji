@@ -21,7 +21,7 @@
                 <img src="<?php echo e(asset('images/fléche.png')); ?>" alt="Flèche vers le bas" class="animated-arrow">
             </a>
         </div>
-        <h1 id="annonces-title" style="color: red; text-align: center; margin-top: 20px;">📢 Annonces Importantes (Click)</h1> <!-- Titre pour les annonces -->
+        <h1 id="annonces-title" style="color: red; text-align: center; margin-top: 20px;">📢 Annonces Importantes (Cliquez ici)</h1> <!-- Titre pour les annonces -->
     </div>
     <div class="image-section">
         <img src="<?php echo e(asset('images/photo.jpg')); ?>" alt="Illustration" class="animated-image">
@@ -68,7 +68,7 @@
     .scroll-down img {
         width: 100px;
         cursor: pointer;
-        animation: bounce 1.5s infinite; /* Animation bounce ajoutée à la flèche */
+        animation: bounce 1.5s infinite; 
     }
 
     @keyframes bounce {
@@ -104,8 +104,8 @@
 
     .annonce-image {
         width: 100%;
-        height: 200px; /* Taille fixe pour les images */
-        object-fit: cover; /* Assure que l'image couvre toute la zone sans être déformée */
+        height: 200px; 
+        object-fit: cover; 
         border-radius: 8px;
     }
 </style>
@@ -114,7 +114,7 @@
     function showAnnonces() {
         const annoncesSection = document.getElementById('annonces');
         const annoncesTitle = document.getElementById('annonces-title');
-        annoncesSection.style.display = 'block'; // Afficher la section des annonces
+        annoncesSection.style.display = 'block'; 
         
     }
 </script>
